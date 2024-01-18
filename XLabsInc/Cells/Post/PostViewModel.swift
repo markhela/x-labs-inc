@@ -10,6 +10,7 @@ import UIKit
 extension PostViewModel {
     enum Action: Actionable {
         case setTitle(String)
+        case setThumbnailUrl(String)
     }
 
     enum Event: Eventable {
@@ -26,6 +27,7 @@ class PostViewModel: BaseViewModel<PostViewModel.Action, PostViewModel.Event>, P
 
     override func postInitialActions() {
         post(.setTitle(photo.title))
+        post(.setThumbnailUrl(photo.thumbnailUrl))
     }
 }
 
