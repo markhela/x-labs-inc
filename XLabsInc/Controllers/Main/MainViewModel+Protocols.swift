@@ -8,7 +8,7 @@
 import Foundation
 
 protocol MainViewModelProtocol {
-
+    func fetchPosts()
 }
 
 protocol MainViewModelExternalProtocol {

@@ -9,12 +9,24 @@ import UIKit
 import SnapKit
 
 class MainViewController: BaseViewController<MainViewModelProtocol, MainViewModel> {
+    
+    private var posts: [PostViewModelProtocol] = [] {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
+
     // MARK: - Subviews
     private lazy var collectionView: UICollectionView = {
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
         collectionView.register(cells: [PostCollectionViewCell.self])
         collectionView.dataSource = self
         return collectionView
+    }()
+    private let activityIndicator: UIActivityIndicatorView = {
+        let activityIndicator = UIActivityIndicatorView(style: .large)
+        activityIndicator.hidesWhenStopped = true
+        return activityIndicator
     }()
 
     // MARK: - Setup
@@ -26,6 +38,11 @@ class MainViewController: BaseViewController<MainViewModelProtocol, MainViewMode
         collectionView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+
+        view.addSubview(activityIndicator)
+        activityIndicator.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
 
     override func configureBindings(with viewModel: MainViewModel?) {
@@ -33,9 +50,19 @@ class MainViewController: BaseViewController<MainViewModelProtocol, MainViewMode
         viewModel.bind(self) { [weak self] action in
             guard let self else { return }
             switch action {
-
+            case .isLoading(let isLoading):
+                isLoading ? self.activityIndicator.startAnimating() : self.activityIndicator.stopAnimating()
+            case .setPosts(let posts):
+                self.posts = posts
             }
         }
+    }
+
+    // MARK: - Life cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        viewModel?.fetchPosts()
     }
 }
 
@@ -57,13 +84,14 @@ private extension MainViewController {
 // MARK: -
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 11
+        return posts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PostCollectionViewCell.reuseIdentifier(), for: indexPath) as? PostCollectionViewCell else {
             return UICollectionViewCell()
         }
+        cell.viewModel = posts[indexPath.item]
         return cell
     }
 }

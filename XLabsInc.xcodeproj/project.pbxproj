@@ -23,8 +23,8 @@
 		C25195842B58272E00A0749E /* BaseCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195782B58272E00A0749E /* BaseCollectionReusableView.swift */; };
 		C25195852B58272E00A0749E /* BasePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195792B58272E00A0749E /* BasePageViewController.swift */; };
 		C25195882B58320400A0749E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195872B58320400A0749E /* UIViewController+Ext.swift */; };
-		C251958B2B5908CC00A0749E /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251958A2B5908CC00A0749E /* PhotosAPIService.swift */; };
-		C251958E2B59114100A0749E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251958D2B59114100A0749E /* Photo.swift */; };
+		C251958B2B5908CC00A0749E /* PostAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251958A2B5908CC00A0749E /* PostAPIService.swift */; };
+		C251958E2B59114100A0749E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251958D2B59114100A0749E /* Post.swift */; };
 		C25195922B5931E800A0749E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195912B5931E800A0749E /* Coordinator.swift */; };
 		C25195952B5933C300A0749E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C25195942B5933C300A0749E /* SnapKit */; };
 		C25195972B5933C300A0749E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C25195962B5933C300A0749E /* SnapKit-Dynamic */; };
@@ -57,8 +57,8 @@
 		C25195782B58272E00A0749E /* BaseCollectionReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCollectionReusableView.swift; sourceTree = "<group>"; };
 		C25195792B58272E00A0749E /* BasePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePageViewController.swift; sourceTree = "<group>"; };
 		C25195872B58320400A0749E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
-		C251958A2B5908CC00A0749E /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
-		C251958D2B59114100A0749E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C251958A2B5908CC00A0749E /* PostAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPIService.swift; sourceTree = "<group>"; };
+		C251958D2B59114100A0749E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		C25195912B5931E800A0749E /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		C251959B2B59359A00A0749E /* MainViewModel+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewModel+Protocols.swift"; sourceTree = "<group>"; };
 		C251959C2B59359A00A0749E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		C25195892B5908B900A0749E /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C251958A2B5908CC00A0749E /* PhotosAPIService.swift */,
+				C251958A2B5908CC00A0749E /* PostAPIService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 		C251958C2B59111A00A0749E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				C251958D2B59114100A0749E /* Photo.swift */,
+				C251958D2B59114100A0749E /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -304,8 +304,8 @@
 				C251959E2B59359A00A0749E /* MainViewModel+Protocols.swift in Sources */,
 				C25195852B58272E00A0749E /* BasePageViewController.swift in Sources */,
 				C251957D2B58272E00A0749E /* CoordinatorRequest.swift in Sources */,
-				C251958E2B59114100A0749E /* Photo.swift in Sources */,
-				C251958B2B5908CC00A0749E /* PhotosAPIService.swift in Sources */,
+				C251958E2B59114100A0749E /* Post.swift in Sources */,
+				C251958B2B5908CC00A0749E /* PostAPIService.swift in Sources */,
 				C251957E2B58272E00A0749E /* BaseActionableTableViewCell.swift in Sources */,
 				C25195592B58139E00A0749E /* AppDelegate.swift in Sources */,
 				C25195B32B59436B00A0749E /* UICollectionView+Register.swift in Sources */,

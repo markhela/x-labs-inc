@@ -6,13 +6,27 @@
 //
 
 import UIKit
+import SnapKit
 
 class PostCollectionViewCell: BaseCollectionViewCell<PostViewModelProtocol, PostViewModel> {
     // MARK: - Subviews
+    private let titleLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.numberOfLines = 0
+        return label
+    }()
 
     // MARK: - Setup
     override func setupUI() {
-        contentView.backgroundColor = .systemTeal
+        contentView.backgroundColor = .systemBackground
+
+        contentView.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.leading.equalTo(8)
+            make.trailing.equalTo(-8)
+            make.bottom.equalTo(-8)
+        }
     }
 
     override func configureBindings(with viewModel: PostViewModel?) {
@@ -20,7 +34,8 @@ class PostCollectionViewCell: BaseCollectionViewCell<PostViewModelProtocol, Post
         viewModel.bind(self) { [weak self] action in
             guard let self else { return }
             switch action {
-
+            case .setTitle(let title):
+                self.titleLabel.text = title
             }
         }
     }

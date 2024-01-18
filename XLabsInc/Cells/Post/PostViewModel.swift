@@ -9,6 +9,7 @@ import UIKit
 
 extension PostViewModel {
     enum Action: Actionable {
+        case setTitle(String)
     }
 
     enum Event: Eventable {
@@ -16,8 +17,15 @@ extension PostViewModel {
 }
 
 class PostViewModel: BaseViewModel<PostViewModel.Action, PostViewModel.Event>, PostViewModelProtocol, PostViewModelExternalProtocol {
-    override func postInitialActions() {
 
+    private let photo: Post
+
+    init(photo: Post) {
+        self.photo = photo
+    }
+
+    override func postInitialActions() {
+        post(.setTitle(photo.title))
     }
 }
 

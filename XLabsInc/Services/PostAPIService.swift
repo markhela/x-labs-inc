@@ -1,5 +1,5 @@
 //
-//  PhotosAPIService.swift
+//  PostAPIService.swift
 //  XLabsInc
 //
 //  Created by Artsem Markhel on 18.01.24.
@@ -7,19 +7,19 @@
 
 import Foundation
 
-protocol PhotosAPIServiceProtocol {
-    func fetchPhotos() async throws -> [Photo]
+protocol PostAPIServiceProtocol {
+    func fetchPosts() async throws -> [Post]
 }
 
-class PhotosAPIService: PhotosAPIServiceProtocol {
+class PostAPIService: PostAPIServiceProtocol {
 
-    func fetchPhotos() async throws -> [Photo] {
+    func fetchPosts() async throws -> [Post] {
         guard let url = URL(string: "https://jsonplaceholder.typicode.com/photos") else {
             throw PhotosAPIServiceError.invalidURL
         }
 
         let (data, _) = try await URLSession.shared.data(from: url)
-        let photos = try JSONDecoder().decode([Photo].self, from: data)
+        let photos = try JSONDecoder().decode([Post].self, from: data)
         return photos
     }
 }
