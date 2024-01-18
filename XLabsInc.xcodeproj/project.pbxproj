@@ -26,6 +26,7 @@
 		C25195882B58320400A0749E /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195872B58320400A0749E /* UIViewController+Ext.swift */; };
 		C251958B2B5908CC00A0749E /* PhotosAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251958A2B5908CC00A0749E /* PhotosAPIService.swift */; };
 		C251958E2B59114100A0749E /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251958D2B59114100A0749E /* Photo.swift */; };
+		C25195922B5931E800A0749E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195912B5931E800A0749E /* MainCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		C25195872B58320400A0749E /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		C251958A2B5908CC00A0749E /* PhotosAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosAPIService.swift; sourceTree = "<group>"; };
 		C251958D2B59114100A0749E /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		C25195912B5931E800A0749E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				C25195892B5908B900A0749E /* Services */,
 				C251958C2B59111A00A0749E /* Models */,
 				C25195862B5831ED00A0749E /* Extensions */,
+				C25195912B5931E800A0749E /* MainCoordinator.swift */,
 				C251955C2B58139E00A0749E /* ViewController.swift */,
 				C25195612B5813A000A0749E /* Assets.xcassets */,
 				C25195632B5813A000A0749E /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 				C251958B2B5908CC00A0749E /* PhotosAPIService.swift in Sources */,
 				C251957E2B58272E00A0749E /* BaseActionableTableViewCell.swift in Sources */,
 				C25195592B58139E00A0749E /* AppDelegate.swift in Sources */,
+				C25195922B5931E800A0749E /* MainCoordinator.swift in Sources */,
 				C25195812B58272E00A0749E /* BaseActionableView.swift in Sources */,
 				C25195882B58320400A0749E /* UIViewController+Ext.swift in Sources */,
 				C251955B2B58139E00A0749E /* SceneDelegate.swift in Sources */,
