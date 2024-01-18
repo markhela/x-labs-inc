@@ -22,7 +22,7 @@ class MainCoordinator: BaseCoordinator<MainCoordinator.Event> {
     }
 
     func start() {
-        let viewController = ViewController()
+        let viewController = MainController()
         window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
