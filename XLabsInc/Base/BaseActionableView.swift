@@ -1,6 +1,5 @@
 import UIKit
 
-//TODO: renamed to BaseActionableView to avoid same naming with old BaseView
 class BaseActionableView<P, ViewModel: BaseActionViewModelProtocol>: UIView {
     var viewModel: P? {
         didSet {

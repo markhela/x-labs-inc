@@ -1,6 +1,5 @@
 import UIKit
 
-//TODO: renamed to BaseActionableTableViewCell to avoid same naming with old BaseTableViewCell
 class BaseActionableTableViewCell<P, ViewModel: BaseActionViewModelProtocol>: UITableViewCell {
     var viewModel: P? {
         didSet {
