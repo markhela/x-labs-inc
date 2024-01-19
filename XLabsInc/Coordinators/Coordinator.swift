@@ -23,6 +23,14 @@ class Coordinator: BaseCoordinator<Coordinator.Event> {
 
     func start() {
         let mainViewModel = MainViewModel()
+        mainViewModel.bindEvents(self) { [weak self] event in
+            guard let self else { return }
+            switch event {
+            case .showError(let error):
+                self.showDefaultAlert(with: error.localizedDescription)
+            }
+        }
+        
         let mainViewController = MainViewController(with: mainViewModel)
         let navigationController = UINavigationController(rootViewController: mainViewController)
         window?.rootViewController = navigationController

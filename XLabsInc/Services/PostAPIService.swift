@@ -24,6 +24,13 @@ class PostAPIService: PostAPIServiceProtocol {
     }
 }
 
-enum PhotosAPIServiceError: Error {
+enum PhotosAPIServiceError: LocalizedError {
     case invalidURL
+
+    var errorDescription: String? {
+        switch self {
+        case .invalidURL:
+            return "Invalid URL"
+        }
+    }
 }

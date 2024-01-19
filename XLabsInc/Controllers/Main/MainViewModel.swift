@@ -14,6 +14,7 @@ extension MainViewModel {
     }
 
     enum Event: Eventable {
+        case showError(Error)
     }
 }
 
@@ -33,7 +34,7 @@ class MainViewModel: BaseViewModel<MainViewModel.Action, MainViewModel.Event>, M
                 post(.isLoading(false))
                 post(.setPosts(postsViewModels))
             } catch {
-                dump(error)
+                postEvent(.showError(error))
             }
         }
     }

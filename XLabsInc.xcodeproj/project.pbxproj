@@ -27,7 +27,6 @@
 		C251958E2B59114100A0749E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251958D2B59114100A0749E /* Post.swift */; };
 		C25195922B5931E800A0749E /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195912B5931E800A0749E /* Coordinator.swift */; };
 		C25195952B5933C300A0749E /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C25195942B5933C300A0749E /* SnapKit */; };
-		C25195972B5933C300A0749E /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C25195962B5933C300A0749E /* SnapKit-Dynamic */; };
 		C251959E2B59359A00A0749E /* MainViewModel+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251959B2B59359A00A0749E /* MainViewModel+Protocols.swift */; };
 		C251959F2B59359A00A0749E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251959C2B59359A00A0749E /* MainViewController.swift */; };
 		C25195A02B59359A00A0749E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C251959D2B59359A00A0749E /* MainViewModel.swift */; };
@@ -37,7 +36,6 @@
 		C25195B12B59433400A0749E /* Cells+Reuseidentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195B02B59433300A0749E /* Cells+Reuseidentifier.swift */; };
 		C25195B32B59436B00A0749E /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195B22B59436B00A0749E /* UICollectionView+Register.swift */; };
 		C25195B62B595EA600A0749E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C25195B52B595EA600A0749E /* SDWebImage */; };
-		C25195B82B595EA600A0749E /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C25195B72B595EA600A0749E /* SDWebImageMapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -79,8 +77,6 @@
 			files = (
 				C25195B62B595EA600A0749E /* SDWebImage in Frameworks */,
 				C25195952B5933C300A0749E /* SnapKit in Frameworks */,
-				C25195B82B595EA600A0749E /* SDWebImageMapKit in Frameworks */,
-				C25195972B5933C300A0749E /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,9 +232,7 @@
 			name = XLabsInc;
 			packageProductDependencies = (
 				C25195942B5933C300A0749E /* SnapKit */,
-				C25195962B5933C300A0749E /* SnapKit-Dynamic */,
 				C25195B52B595EA600A0749E /* SDWebImage */,
-				C25195B72B595EA600A0749E /* SDWebImageMapKit */,
 			);
 			productName = XLabsInc;
 			productReference = C25195552B58139E00A0749E /* XLabsInc.app */;
@@ -563,20 +557,10 @@
 			package = C25195932B5933C300A0749E /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
 		};
-		C25195962B5933C300A0749E /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C25195932B5933C300A0749E /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
-		};
 		C25195B52B595EA600A0749E /* SDWebImage */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C25195B42B595EA600A0749E /* XCRemoteSwiftPackageReference "SDWebImage" */;
 			productName = SDWebImage;
-		};
-		C25195B72B595EA600A0749E /* SDWebImageMapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C25195B42B595EA600A0749E /* XCRemoteSwiftPackageReference "SDWebImage" */;
-			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
