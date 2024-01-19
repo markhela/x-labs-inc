@@ -21,6 +21,7 @@ class MainViewController: BaseViewController<MainViewModelProtocol, MainViewMode
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout())
         collectionView.register(cells: [PostCollectionViewCell.self])
         collectionView.dataSource = self
+        collectionView.delegate = self
         return collectionView
     }()
     private let activityIndicator: UIActivityIndicatorView = {
@@ -81,7 +82,7 @@ private extension MainViewController {
     }
 }
 
-// MARK: -
+// MARK: - UICollectionViewDataSource
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return posts.count
@@ -93,5 +94,13 @@ extension MainViewController: UICollectionViewDataSource {
         }
         cell.viewModel = posts[indexPath.item]
         return cell
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let post = posts[indexPath.item].post
+        viewModel?.selectDetail(post: post)
     }
 }

@@ -15,6 +15,7 @@ extension MainViewModel {
 
     enum Event: Eventable {
         case showError(Error)
+        case showDetail(Post)
     }
 }
 
@@ -30,13 +31,17 @@ class MainViewModel: BaseViewModel<MainViewModel.Action, MainViewModel.Event>, M
         Task {
             do {
                 let fetchedPosts = try await postsAPIService.fetchPosts()
-                let postsViewModels = fetchedPosts.map { PostViewModel(photo: $0) }
+                let postsViewModels = fetchedPosts.map { PostViewModel(post: $0) }
                 post(.isLoading(false))
                 post(.setPosts(postsViewModels))
             } catch {
                 postEvent(.showError(error))
             }
         }
+    }
+
+    func selectDetail(post: Post) {
+        postEvent(.showDetail(post))
     }
 }
 

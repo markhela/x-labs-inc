@@ -8,7 +8,7 @@
 import Foundation
 
 protocol PostViewModelProtocol {
-
+    var post: Post { get }
 }
 
 protocol PostViewModelExternalProtocol {

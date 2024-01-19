@@ -19,15 +19,15 @@ extension PostViewModel {
 
 class PostViewModel: BaseViewModel<PostViewModel.Action, PostViewModel.Event>, PostViewModelProtocol, PostViewModelExternalProtocol {
 
-    private let photo: Post
+    let post: Post
 
-    init(photo: Post) {
-        self.photo = photo
+    init(post: Post) {
+        self.post = post
     }
 
     override func postInitialActions() {
-        post(.setTitle(photo.title))
-        post(.setThumbnailUrl(photo.thumbnailUrl))
+        post(.setTitle(post.title))
+        post(.setThumbnailUrl(post.thumbnailUrl))
     }
 }
 

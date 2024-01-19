@@ -36,6 +36,9 @@
 		C25195B12B59433400A0749E /* Cells+Reuseidentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195B02B59433300A0749E /* Cells+Reuseidentifier.swift */; };
 		C25195B32B59436B00A0749E /* UICollectionView+Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195B22B59436B00A0749E /* UICollectionView+Register.swift */; };
 		C25195B62B595EA600A0749E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = C25195B52B595EA600A0749E /* SDWebImage */; };
+		C25195BD2B5A4E3900A0749E /* DetailViewModel+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195BA2B5A4E3900A0749E /* DetailViewModel+Protocols.swift */; };
+		C25195BE2B5A4E3900A0749E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195BB2B5A4E3900A0749E /* DetailViewController.swift */; };
+		C25195BF2B5A4E3900A0749E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195BC2B5A4E3900A0749E /* DetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,9 @@
 		C25195AB2B59404500A0749E /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		C25195B02B59433300A0749E /* Cells+Reuseidentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cells+Reuseidentifier.swift"; sourceTree = "<group>"; };
 		C25195B22B59436B00A0749E /* UICollectionView+Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Register.swift"; sourceTree = "<group>"; };
+		C25195BA2B5A4E3900A0749E /* DetailViewModel+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewModel+Protocols.swift"; sourceTree = "<group>"; };
+		C25195BB2B5A4E3900A0749E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C25195BC2B5A4E3900A0749E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				C251959A2B59358600A0749E /* Main */,
+				C25195B92B5A4DEF00A0749E /* Detail */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -212,6 +219,16 @@
 				C25195AB2B59404500A0749E /* PostViewModel.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		C25195B92B5A4DEF00A0749E /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C25195BA2B5A4E3900A0749E /* DetailViewModel+Protocols.swift */,
+				C25195BB2B5A4E3900A0749E /* DetailViewController.swift */,
+				C25195BC2B5A4E3900A0749E /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -295,11 +312,13 @@
 				C251957B2B58272E00A0749E /* BaseViewController.swift in Sources */,
 				C25195832B58272E00A0749E /* AlertAction.swift in Sources */,
 				C25195842B58272E00A0749E /* BaseCollectionReusableView.swift in Sources */,
+				C25195BD2B5A4E3900A0749E /* DetailViewModel+Protocols.swift in Sources */,
 				C25195B12B59433400A0749E /* Cells+Reuseidentifier.swift in Sources */,
 				C251957C2B58272E00A0749E /* BaseCoordinator.swift in Sources */,
 				C25195802B58272E00A0749E /* BaseActionableControl.swift in Sources */,
 				C251959F2B59359A00A0749E /* MainViewController.swift in Sources */,
 				C251957F2B58272E00A0749E /* BaseCollectionViewCell.swift in Sources */,
+				C25195BE2B5A4E3900A0749E /* DetailViewController.swift in Sources */,
 				C25195822B58272E00A0749E /* BaseViewModel.swift in Sources */,
 				C25195AD2B59404500A0749E /* PostCollectionViewCell.swift in Sources */,
 				C251959E2B59359A00A0749E /* MainViewModel+Protocols.swift in Sources */,
@@ -313,6 +332,7 @@
 				C25195AC2B59404500A0749E /* PostViewModel+Protocols.swift in Sources */,
 				C25195A02B59359A00A0749E /* MainViewModel.swift in Sources */,
 				C25195922B5931E800A0749E /* Coordinator.swift in Sources */,
+				C25195BF2B5A4E3900A0749E /* DetailViewModel.swift in Sources */,
 				C25195AE2B59404500A0749E /* PostViewModel.swift in Sources */,
 				C25195812B58272E00A0749E /* BaseActionableView.swift in Sources */,
 				C25195882B58320400A0749E /* UIViewController+Ext.swift in Sources */,
