@@ -16,6 +16,7 @@ extension MainViewModel {
     enum Event: Eventable {
         case showError(Error)
         case showDetail(Post)
+        case showAdd
     }
 }
 
@@ -42,6 +43,10 @@ class MainViewModel: BaseViewModel<MainViewModel.Action, MainViewModel.Event>, M
 
     func selectDetail(post: Post) {
         postEvent(.showDetail(post))
+    }
+
+    func add() {
+        postEvent(.showAdd)
     }
 }
 

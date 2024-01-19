@@ -39,6 +39,11 @@
 		C25195BD2B5A4E3900A0749E /* DetailViewModel+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195BA2B5A4E3900A0749E /* DetailViewModel+Protocols.swift */; };
 		C25195BE2B5A4E3900A0749E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195BB2B5A4E3900A0749E /* DetailViewController.swift */; };
 		C25195BF2B5A4E3900A0749E /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25195BC2B5A4E3900A0749E /* DetailViewModel.swift */; };
+		C2EF7E092B5A9365006AE098 /* AddViewModel+Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF7E062B5A9365006AE098 /* AddViewModel+Protocols.swift */; };
+		C2EF7E0A2B5A9365006AE098 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF7E072B5A9365006AE098 /* AddViewController.swift */; };
+		C2EF7E0B2B5A9365006AE098 /* AddViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF7E082B5A9365006AE098 /* AddViewModel.swift */; };
+		C2EF7E0D2B5A9DA4006AE098 /* UIImage+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF7E0C2B5A9DA4006AE098 /* UIImage+Gradient.swift */; };
+		C2EF7E102B5A9E3B006AE098 /* GradientBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2EF7E0F2B5A9E3B006AE098 /* GradientBorderButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +79,11 @@
 		C25195BA2B5A4E3900A0749E /* DetailViewModel+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DetailViewModel+Protocols.swift"; sourceTree = "<group>"; };
 		C25195BB2B5A4E3900A0749E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		C25195BC2B5A4E3900A0749E /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		C2EF7E062B5A9365006AE098 /* AddViewModel+Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AddViewModel+Protocols.swift"; sourceTree = "<group>"; };
+		C2EF7E072B5A9365006AE098 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		C2EF7E082B5A9365006AE098 /* AddViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewModel.swift; sourceTree = "<group>"; };
+		C2EF7E0C2B5A9DA4006AE098 /* UIImage+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Gradient.swift"; sourceTree = "<group>"; };
+		C2EF7E0F2B5A9E3B006AE098 /* GradientBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBorderButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +126,7 @@
 				C25195982B5934A800A0749E /* Coordinators */,
 				C25195992B59356C00A0749E /* Controllers */,
 				C25195A12B593FAF00A0749E /* Cells */,
+				C2EF7E0E2B5A9E1F006AE098 /* Components */,
 				C25195612B5813A000A0749E /* Assets.xcassets */,
 				C25195632B5813A000A0749E /* LaunchScreen.storyboard */,
 				C25195662B5813A000A0749E /* Info.plist */,
@@ -156,6 +167,7 @@
 				C25195872B58320400A0749E /* UIViewController+Ext.swift */,
 				C25195B02B59433300A0749E /* Cells+Reuseidentifier.swift */,
 				C25195B22B59436B00A0749E /* UICollectionView+Register.swift */,
+				C2EF7E0C2B5A9DA4006AE098 /* UIImage+Gradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -189,6 +201,7 @@
 			children = (
 				C251959A2B59358600A0749E /* Main */,
 				C25195B92B5A4DEF00A0749E /* Detail */,
+				C2EF7E052B5A9346006AE098 /* Add */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,6 +242,24 @@
 				C25195BC2B5A4E3900A0749E /* DetailViewModel.swift */,
 			);
 			path = Detail;
+			sourceTree = "<group>";
+		};
+		C2EF7E052B5A9346006AE098 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				C2EF7E062B5A9365006AE098 /* AddViewModel+Protocols.swift */,
+				C2EF7E072B5A9365006AE098 /* AddViewController.swift */,
+				C2EF7E082B5A9365006AE098 /* AddViewModel.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		C2EF7E0E2B5A9E1F006AE098 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C2EF7E0F2B5A9E3B006AE098 /* GradientBorderButton.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +344,7 @@
 				C25195832B58272E00A0749E /* AlertAction.swift in Sources */,
 				C25195842B58272E00A0749E /* BaseCollectionReusableView.swift in Sources */,
 				C25195BD2B5A4E3900A0749E /* DetailViewModel+Protocols.swift in Sources */,
+				C2EF7E102B5A9E3B006AE098 /* GradientBorderButton.swift in Sources */,
 				C25195B12B59433400A0749E /* Cells+Reuseidentifier.swift in Sources */,
 				C251957C2B58272E00A0749E /* BaseCoordinator.swift in Sources */,
 				C25195802B58272E00A0749E /* BaseActionableControl.swift in Sources */,
@@ -320,14 +352,18 @@
 				C251957F2B58272E00A0749E /* BaseCollectionViewCell.swift in Sources */,
 				C25195BE2B5A4E3900A0749E /* DetailViewController.swift in Sources */,
 				C25195822B58272E00A0749E /* BaseViewModel.swift in Sources */,
+				C2EF7E0D2B5A9DA4006AE098 /* UIImage+Gradient.swift in Sources */,
 				C25195AD2B59404500A0749E /* PostCollectionViewCell.swift in Sources */,
 				C251959E2B59359A00A0749E /* MainViewModel+Protocols.swift in Sources */,
+				C2EF7E092B5A9365006AE098 /* AddViewModel+Protocols.swift in Sources */,
 				C25195852B58272E00A0749E /* BasePageViewController.swift in Sources */,
 				C251957D2B58272E00A0749E /* CoordinatorRequest.swift in Sources */,
 				C251958E2B59114100A0749E /* Post.swift in Sources */,
+				C2EF7E0B2B5A9365006AE098 /* AddViewModel.swift in Sources */,
 				C251958B2B5908CC00A0749E /* PostAPIService.swift in Sources */,
 				C251957E2B58272E00A0749E /* BaseActionableTableViewCell.swift in Sources */,
 				C25195592B58139E00A0749E /* AppDelegate.swift in Sources */,
+				C2EF7E0A2B5A9365006AE098 /* AddViewController.swift in Sources */,
 				C25195B32B59436B00A0749E /* UICollectionView+Register.swift in Sources */,
 				C25195AC2B59404500A0749E /* PostViewModel+Protocols.swift in Sources */,
 				C25195A02B59359A00A0749E /* MainViewModel.swift in Sources */,
@@ -406,7 +442,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -463,7 +499,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -487,7 +523,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,7 +551,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

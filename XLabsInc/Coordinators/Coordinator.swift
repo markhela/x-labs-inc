@@ -37,6 +37,8 @@ class Coordinator: BaseCoordinator<Coordinator.Event> {
                 self.showDefaultAlert(with: error.localizedDescription)
             case .showDetail(let post):
                 self.showDetail(post: post)
+            case .showAdd:
+                self.showAdd()
             }
         }
     }
@@ -65,5 +67,11 @@ private extension Coordinator {
         let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
         activityViewController.popoverPresentationController?.sourceView = sourceView
         viewController.present(activityViewController, animated: true)
+    }
+
+    func showAdd() {
+        let addViewModel = AddViewModel()
+        let addViewController = AddViewController(with: addViewModel)
+        navigationController?.pushViewController(addViewController, animated: true)
     }
 }

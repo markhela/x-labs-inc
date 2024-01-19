@@ -34,6 +34,7 @@ class MainViewController: BaseViewController<MainViewModelProtocol, MainViewMode
     override func setupUI() {
         navigationItem.title = "Main"
         view.backgroundColor = .systemBackground
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addAction))
 
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints { make in
@@ -79,6 +80,11 @@ private extension MainViewController {
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)
         return layout
+    }
+
+    @objc
+    func addAction() {
+        viewModel?.add()
     }
 }
 

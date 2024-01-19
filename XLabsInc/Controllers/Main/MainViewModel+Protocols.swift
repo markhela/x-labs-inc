@@ -10,6 +10,7 @@ import Foundation
 protocol MainViewModelProtocol {
     func fetchPosts()
     func selectDetail(post: Post)
+    func add()
 }
 
 protocol MainViewModelExternalProtocol {

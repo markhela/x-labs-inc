@@ -82,7 +82,7 @@ class DetailViewController: BaseViewController<DetailViewModelProtocol, DetailVi
 private extension DetailViewController {
 
     @objc
-    private func shareAction() {
+    func shareAction() {
         guard let image = imageView.image else { return }
         viewModel?.shareImage(image)
     }
