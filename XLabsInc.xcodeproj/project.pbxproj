@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				C203914E2B5AB57E0062A2EB /* Base */,
-				C203914F2B5AB58E0062A2EB /* APIEndpoint.swift */,
+				C20391532B5AD7B50062A2EB /* Endpoints */,
 				C20391512B5AB7B60062A2EB /* APIService.swift */,
 			);
 			path = Network;
@@ -130,6 +130,14 @@
 				C203914C2B5AB4E80062A2EB /* HTTPClient.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		C20391532B5AD7B50062A2EB /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				C203914F2B5AB58E0062A2EB /* APIEndpoint.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		C251954C2B58139E00A0749E = {

@@ -23,7 +23,7 @@ class Coordinator: BaseCoordinator<Coordinator.Event> {
     }
 
     func start() {
-        let mainViewModel = MainViewModel()
+        let mainViewModel = MainViewModel(apiService: APIService())
         let mainViewController = MainViewController(with: mainViewModel)
         let navigationController = UINavigationController(rootViewController: mainViewController)
         self.navigationController = navigationController
@@ -74,7 +74,7 @@ private extension Coordinator {
     }
 
     func showAdd() {
-        let addViewModel = AddViewModel()
+        let addViewModel = AddViewModel(apiService: APIService())
         let addViewController = AddViewController(with: addViewModel)
         navigationController?.pushViewController(addViewController, animated: true)
 

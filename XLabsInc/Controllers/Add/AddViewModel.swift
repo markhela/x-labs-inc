@@ -19,7 +19,12 @@ extension AddViewModel {
 
 class AddViewModel: BaseViewModel<AddViewModel.Action, AddViewModel.Event>, AddViewModelProtocol, AddViewModelExternalProtocol {
 
-    private let apiService: APIServiceProtocol = APIService()
+    private let apiService: APIServiceProtocol
+
+    init(apiService: APIServiceProtocol) {
+        self.apiService = apiService
+        super.init()
+    }
 
     override func postInitialActions() {
 

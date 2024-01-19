@@ -22,7 +22,12 @@ extension MainViewModel {
 
 class MainViewModel: BaseViewModel<MainViewModel.Action, MainViewModel.Event>, MainViewModelProtocol, MainViewModelExternalProtocol {
     
-    private let apiService: APIServiceProtocol = APIService()
+    private let apiService: APIServiceProtocol
+
+    init(apiService: APIServiceProtocol) {
+        self.apiService = apiService
+        super.init()
+    }
 
     override func postInitialActions() {
     }
