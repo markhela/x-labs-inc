@@ -9,6 +9,8 @@ import UIKit
 
 extension DetailViewModel {
     enum Action: Actionable {
+        case setTitle(String)
+        case setImageURL(String)
     }
 
     enum Event: Eventable {
@@ -25,7 +27,8 @@ class DetailViewModel: BaseViewModel<DetailViewModel.Action, DetailViewModel.Eve
     }
 
     override func postInitialActions() {
-
+        post(.setTitle(post.title))
+        post(.setImageURL(post.url))
     }
 }
 
