@@ -31,7 +31,7 @@ class AddViewController: BaseViewController<AddViewModelProtocol, AddViewModel> 
     }()
     private lazy var addButton: GradientBorderButton = {
         let button = GradientBorderButton()
-        button.setTitle("Add", for: .normal)
+        button.setTitle("Send", for: .normal)
         button.setTitleColor(.blue, for: .normal)
         button.setTitleColor(.blue.withAlphaComponent(0.5), for: .highlighted)
         button.addTarget(self, action: #selector(addAction), for: .touchUpInside)
