@@ -22,7 +22,7 @@ extension MainViewModel {
 
 class MainViewModel: BaseViewModel<MainViewModel.Action, MainViewModel.Event>, MainViewModelProtocol, MainViewModelExternalProtocol {
     
-    private let postsAPIService: PostAPIServiceProtocol = PostAPIService()
+    private let apiService: APIServiceProtocol = APIService()
 
     override func postInitialActions() {
     }
@@ -31,7 +31,7 @@ class MainViewModel: BaseViewModel<MainViewModel.Action, MainViewModel.Event>, M
         post(.isLoading(true))
         Task {
             do {
-                let fetchedPosts = try await postsAPIService.fetchPosts()
+                let fetchedPosts = try await apiService.fetchPosts()
                 let postsViewModels = fetchedPosts.map { PostViewModel(post: $0) }
                 post(.isLoading(false))
                 post(.setPosts(postsViewModels))

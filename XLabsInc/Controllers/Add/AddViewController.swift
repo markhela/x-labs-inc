@@ -88,6 +88,10 @@ private extension AddViewController {
     @objc
     func addAction() {
         feedbackGenerator.impactOccurred()
+        let addDTO = AddDTO(title: titleTextField.text ?? "",
+                            body: bodyTextField.text ?? "",
+                            userId: 1)
+        viewModel?.sendData(dto: addDTO)
     }
 
     @objc

@@ -73,5 +73,15 @@ private extension Coordinator {
         let addViewModel = AddViewModel()
         let addViewController = AddViewController(with: addViewModel)
         navigationController?.pushViewController(addViewController, animated: true)
+
+        addViewModel.bindEvents(self) { [weak self] event in
+            guard let self else { return }
+            switch event {
+            case .showError(let error):
+                self.showDefaultAlert(with: error.localizedDescription)
+            case .showSuccess:
+                self.showDefaultAlert(with: "Success")
+            }
+        }
     }
 }

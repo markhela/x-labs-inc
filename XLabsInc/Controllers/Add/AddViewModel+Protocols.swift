@@ -8,7 +8,7 @@
 import Foundation
 
 protocol AddViewModelProtocol {
-
+    func sendData(dto: AddDTO)
 }
 
 protocol AddViewModelExternalProtocol {

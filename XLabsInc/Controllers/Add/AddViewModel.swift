@@ -12,12 +12,28 @@ extension AddViewModel {
     }
 
     enum Event: Eventable {
+        case showError(Error)
+        case showSuccess
     }
 }
 
 class AddViewModel: BaseViewModel<AddViewModel.Action, AddViewModel.Event>, AddViewModelProtocol, AddViewModelExternalProtocol {
+
+    private let apiService: APIServiceProtocol = APIService()
+
     override func postInitialActions() {
 
+    }
+
+    func sendData(dto: AddDTO) {
+        Task {
+            do {
+                try await apiService.send(dto: dto)
+                postEvent(.showSuccess)
+            } catch {
+                postEvent(.showError(error))
+            }
+        }
     }
 }
 
