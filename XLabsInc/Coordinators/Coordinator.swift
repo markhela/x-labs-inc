@@ -42,6 +42,10 @@ class Coordinator: BaseCoordinator<Coordinator.Event> {
             }
         }
     }
+
+    func showWokeUpAlert() {
+        self.showDefaultAlert(with: "I woke up")
+    }
 }
 
 // MARK: - private functions
