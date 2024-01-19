@@ -25,7 +25,7 @@ class DetailViewController: BaseViewController<DetailViewModelProtocol, DetailVi
         scrollView.delegate = self
         return scrollView
     }()
-    private let imageView: UIImageView = {
+    let imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.sd_imageIndicator = SDWebImageActivityIndicator.medium
@@ -36,6 +36,7 @@ class DetailViewController: BaseViewController<DetailViewModelProtocol, DetailVi
     override func setupUI() {
         navigationItem.title = "Detail"
         view.backgroundColor = .systemBackground
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(shareAction))
 
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
@@ -80,6 +81,11 @@ class DetailViewController: BaseViewController<DetailViewModelProtocol, DetailVi
 // MARK: - private functions
 private extension DetailViewController {
 
+    @objc
+    private func shareAction() {
+        guard let image = imageView.image else { return }
+        viewModel?.shareImage(image)
+    }
 }
 
 extension DetailViewController: UIScrollViewDelegate {

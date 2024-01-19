@@ -14,6 +14,7 @@ extension DetailViewModel {
     }
 
     enum Event: Eventable {
+        case showShare(UIImage)
     }
 }
 
@@ -29,6 +30,10 @@ class DetailViewModel: BaseViewModel<DetailViewModel.Action, DetailViewModel.Eve
     override func postInitialActions() {
         post(.setTitle(post.title))
         post(.setImageURL(post.url))
+    }
+
+    func shareImage(_ image: UIImage) {
+        postEvent(.showShare(image))
     }
 }
 

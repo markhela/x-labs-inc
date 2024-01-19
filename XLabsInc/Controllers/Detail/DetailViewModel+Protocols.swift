@@ -5,10 +5,10 @@
 //  Created by Artsem Markhel on 19.01.24.
 //
 
-import Foundation
+import UIKit
 
 protocol DetailViewModelProtocol {
-
+    func shareImage(_ image: UIImage)
 }
 
 protocol DetailViewModelExternalProtocol {

@@ -49,5 +49,21 @@ private extension Coordinator {
         let detailViewModel = DetailViewModel(post: post)
         let detailViewController = DetailViewController(with: detailViewModel)
         navigationController?.pushViewController(detailViewController, animated: true)
+
+        detailViewModel.bindEvents(self) { [weak self, weak detailViewController] event in
+            guard let self, let detailViewController else { return }
+            switch event {
+            case .showShare(let image):
+                self.showShare(image: image,
+                               from: detailViewController,
+                               sourceView: detailViewController.imageView)
+            }
+        }
+    }
+
+    func showShare(image: UIImage, from viewController: UIViewController, sourceView: UIView) {
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = sourceView
+        viewController.present(activityViewController, animated: true)
     }
 }
