@@ -70,16 +70,6 @@ class AddViewController: BaseViewController<AddViewModelProtocol, AddViewModel> 
             make.centerX.equalToSuperview()
         }
     }
-
-    override func configureBindings(with viewModel: AddViewModel?) {
-        guard let viewModel else { return }
-        viewModel.bind(self) { [weak self] action in
-            guard let self else { return }
-            switch action {
-
-            }
-        }
-    }
 }
 
 // MARK: - private functions
